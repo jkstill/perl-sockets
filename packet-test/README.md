@@ -30,6 +30,12 @@ do
 done
 ```
 
+Create 128M file:
+
+```bash
+(dd if=/dev/urandom  bs=1M count=3000) | gzip -  | dd iflag=fullblock bs=1M count=128 of=testdata-128M.dat
+```
+
 ## server.pl
 
 Set the port with this line near the top of the script
